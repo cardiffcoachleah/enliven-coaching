@@ -195,35 +195,44 @@ export default function Home() {
       {/* ============ MEET YOUR COACH ============ */}
       <section className="relative py-20 md:py-32 bg-cream overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 md:px-10">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
-            {/* Portrait */}
-            <div className="lg:col-span-5 relative">
-              <div className="relative aspect-[4/5] max-w-sm mx-auto lg:max-w-none rounded-[2rem] overflow-hidden shadow-lifted">
-                <img
-                  src={encodeURI(images.katie)}
-                  alt="Katie, founder of Enliven Coaching"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              {/* Decorative script behind */}
-              <p className="hidden lg:block absolute -bottom-6 -right-4 font-script text-ember/40 text-6xl pointer-events-none">
-                hello there
-              </p>
+          {/* Text intro above the landscape */}
+          <div className="max-w-3xl mb-12 md:mb-16">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="h-px w-10 bg-ember" />
+              <span className="text-xs uppercase tracking-[0.25em] text-ember font-medium">
+                Meet your coach
+              </span>
             </div>
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-plum leading-[1.05] tracking-tight">
+              I'm <span className="italic">Katie</span> — and I believe in
+              holding space for who you really are.
+            </h2>
+          </div>
 
-            {/* Text */}
-            <div className="lg:col-span-7">
-              <div className="flex items-center gap-3 mb-6">
-                <span className="h-px w-10 bg-ember" />
-                <span className="text-xs uppercase tracking-[0.25em] text-ember font-medium">
-                  Meet your coach
-                </span>
-              </div>
-              <h2 className="font-display text-4xl md:text-5xl text-plum leading-[1.05] tracking-tight mb-8">
-                I'm <span className="italic">Katie</span> — and I believe in
-                holding space for who you really are.
-              </h2>
+          {/* Wide atmospheric landscape */}
+          <div className="relative rounded-[2rem] overflow-hidden shadow-lifted aspect-[16/10] md:aspect-[21/10]">
+            <img
+              src={encodeURI(images.tree)}
+              alt="A solitary tree on open ground, with a figure walking beneath it"
+              className="w-full h-full object-cover"
+            />
+            {/* Subtle warm wash to help text legibility if we add any */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background:
+                  'linear-gradient(to top, rgba(58,37,59,0.15) 0%, rgba(58,37,59,0) 40%)',
+              }}
+            />
+            {/* Script overlay bottom-right */}
+            <p className="absolute bottom-6 right-6 md:bottom-10 md:right-10 font-script text-cream text-2xl md:text-4xl drop-shadow-lg">
+              walking alongside you.
+            </p>
+          </div>
 
+          {/* Text below the landscape, two columns */}
+          <div className="grid md:grid-cols-12 gap-10 md:gap-16 mt-12 md:mt-16 items-start">
+            <div className="md:col-span-7">
               <div className="space-y-5 text-base md:text-lg text-ink/80 leading-relaxed font-light">
                 <p>
                   I walk alongside you as you reconnect with your true self. As
@@ -238,11 +247,13 @@ export default function Home() {
                   commitment to discovering what's possible for you.
                 </p>
               </div>
+            </div>
 
-              <div className="mt-10 flex flex-wrap items-center gap-6">
+            <div className="md:col-span-5 md:pl-6 md:border-l md:border-plum/15">
+              <div className="flex flex-col gap-5">
                 <Link
                   href="/about"
-                  className="inline-flex items-center gap-3 rounded-full border border-plum/30 text-plum px-7 py-4 text-base tracking-wide hover:bg-plum hover:text-cream transition-colors"
+                  className="inline-flex items-center gap-3 rounded-full border border-plum/30 text-plum px-7 py-4 text-base tracking-wide hover:bg-plum hover:text-cream transition-colors w-fit"
                 >
                   More about Katie
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -255,11 +266,15 @@ export default function Home() {
                     />
                   </svg>
                 </Link>
-                {/* Credential badges */}
-                <div className="flex items-center gap-4 text-xs uppercase tracking-widest text-smoke">
-                  <span>ICF · ACC</span>
-                  <span className="h-3 w-px bg-plum/20" />
-                  <span>Wayfinder Certified</span>
+                <div className="flex flex-col gap-2 text-xs uppercase tracking-widest text-smoke">
+                  <span className="flex items-center gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-ember" />
+                    ICF Certified · ACC
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-ember" />
+                    Wayfinder Life Coach
+                  </span>
                 </div>
               </div>
             </div>

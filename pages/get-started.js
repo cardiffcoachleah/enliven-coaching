@@ -63,7 +63,7 @@ export default function GetStarted() {
                     "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' seed='5'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
                 }}
               />
-              <div className="relative">
+              <div className="relative flex flex-col h-full">
                 <div className="flex items-center gap-3 mb-8">
                   <span className="h-px w-10 bg-sunlit" />
                   <span className="text-xs uppercase tracking-[0.25em] text-sunlit font-medium">
@@ -71,34 +71,34 @@ export default function GetStarted() {
                   </span>
                 </div>
                 <h2 className="font-display text-3xl md:text-4xl text-cream tracking-tight leading-[1.1] mb-6">
-                  Book a free
-                  <br />
-                  <span className="italic text-sunlit">60-minute</span>
+                  Book a <span className="italic text-sunlit">free</span>
                   <br />
                   discovery call.
                 </h2>
                 <p className="text-cream/75 leading-relaxed mb-8 font-light">
-                  A relaxed conversation about what's bringing you to coaching,
-                  and whether we're a good fit to work together. No pressure,
-                  no obligation.
+                  A relaxed 60-minute conversation about what's bringing you to
+                  coaching, and whether we're a good fit to work together. No
+                  pressure, no obligation.
                 </p>
-                <a
-                  href={images.calendly}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 rounded-full bg-ember text-plum px-7 py-4 text-base tracking-wide hover:bg-sunlit transition-colors"
-                >
-                  Book a session with me
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path
-                      d="M1 8h14m-6-6l6 6-6 6"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </a>
+                <div className="mt-auto">
+                  <a
+                    href={images.calendly}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 rounded-full bg-ember text-plum px-7 py-4 text-base tracking-wide hover:bg-sunlit transition-colors"
+                  >
+                    Book a session with me
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path
+                        d="M1 8h14m-6-6l6 6-6 6"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -111,7 +111,9 @@ export default function GetStarted() {
                 </span>
               </div>
               <h2 className="font-display text-3xl md:text-4xl text-plum tracking-tight leading-[1.1] mb-6">
-                Send me a <span className="italic">note.</span>
+                Send me a <span className="italic text-ember">note.</span>
+                <br />
+                I'd love to hear.
               </h2>
               <p className="text-ink/75 leading-relaxed mb-8 font-light">
                 Not sure if coaching is right for you? Have a question about
@@ -199,18 +201,17 @@ export default function GetStarted() {
       </section>
 
       {/* ============ FAQ / COMMON QUESTIONS ============ */}
-      <section className="relative py-20 md:py-28 bg-parchment overflow-hidden">
-        {/* Mountain wash */}
-        <div className="absolute inset-x-0 bottom-0 opacity-[0.08] pointer-events-none">
-          <img
-            src={encodeURI(images.mountains)}
-            alt=""
-            className="w-full h-auto"
-          />
-        </div>
-
+      <section className="relative py-20 md:py-28 bg-parchment">
         <div className="relative max-w-3xl mx-auto px-6 md:px-10">
           <div className="mb-12 text-center">
+            {/* Small decorative gold mark */}
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <span className="h-px w-8 bg-gold/60" />
+              <svg width="8" height="8" viewBox="0 0 8 8" className="text-gold/70">
+                <circle cx="4" cy="4" r="2" fill="currentColor" />
+              </svg>
+              <span className="h-px w-8 bg-gold/60" />
+            </div>
             <p className="font-script text-ember text-2xl md:text-3xl mb-3">
               wondering about —
             </p>
@@ -242,7 +243,7 @@ export default function GetStarted() {
                 key={i}
                 className="group bg-cream rounded-2xl border border-plum/10 overflow-hidden"
               >
-                <summary className="cursor-pointer list-none px-6 md:px-8 py-5 flex items-center justify-between gap-4 hover:bg-parchment/60 transition-colors">
+                <summary className="cursor-pointer list-none px-6 md:px-8 py-5 flex items-center justify-between gap-4 hover:bg-cream/60 transition-colors">
                   <h3 className="font-display text-lg md:text-xl text-plum tracking-tight">
                     {item.q}
                   </h3>
