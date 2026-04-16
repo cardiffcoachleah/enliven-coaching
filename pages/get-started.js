@@ -36,11 +36,8 @@ export default function GetStarted() {
             </span>
             <span className="h-px w-10 bg-ember" />
           </div>
-          <p className="font-script text-ember text-3xl md:text-4xl mb-4">
-            whenever you're ready —
-          </p>
           <h1 className="font-display text-5xl md:text-7xl text-plum tracking-tightest leading-[1.02]">
-            Let's <span className="italic">begin.</span>
+            Whenever you're <span className="italic">ready</span>.
           </h1>
           <p className="mt-8 text-lg md:text-xl text-ink/75 leading-relaxed max-w-xl mx-auto font-light">
             There's no wrong way to reach out. Book a free consultation, or
@@ -205,18 +202,15 @@ export default function GetStarted() {
         <div className="relative max-w-3xl mx-auto px-6 md:px-10">
           <div className="mb-12 text-center">
             {/* Small decorative gold mark */}
-            <div className="flex items-center justify-center gap-3 mb-6">
+            <div className="flex items-center justify-center gap-3 mb-8">
               <span className="h-px w-8 bg-gold/60" />
               <svg width="8" height="8" viewBox="0 0 8 8" className="text-gold/70">
                 <circle cx="4" cy="4" r="2" fill="currentColor" />
               </svg>
               <span className="h-px w-8 bg-gold/60" />
             </div>
-            <p className="font-script text-ember text-2xl md:text-3xl mb-3">
-              wondering about —
-            </p>
             <h2 className="font-display text-3xl md:text-5xl text-plum tracking-tight leading-tight">
-              A few common questions.
+              A few common <span className="italic">questions</span>.
             </h2>
           </div>
 

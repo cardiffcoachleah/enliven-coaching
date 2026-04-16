@@ -75,29 +75,16 @@ export default function Home() {
                   src={encodeURI(images.hero)}
                   alt="A meditator at sunrise"
                   className="w-full h-full object-cover"
+                  style={{ objectPosition: 'center 30%' }}
                 />
                 {/* Warm vignette */}
                 <div
                   className="absolute inset-0"
                   style={{
                     background:
-                      'linear-gradient(180deg, rgba(58,37,59,0) 40%, rgba(58,37,59,0.45) 100%)',
+                      'linear-gradient(180deg, rgba(58,37,59,0) 60%, rgba(58,37,59,0.3) 100%)',
                   }}
                 />
-                {/* Script accent */}
-                <p className="absolute bottom-8 left-8 right-8 font-script text-cream text-3xl md:text-4xl leading-tight drop-shadow-lg">
-                  breathe, notice,
-                  <br />
-                  begin again.
-                </p>
-              </div>
-
-              {/* Credential pill */}
-              <div className="hidden md:flex absolute -bottom-5 -right-4 bg-cream rounded-full px-5 py-3 shadow-soft items-center gap-2">
-                <span className="h-2 w-2 rounded-full bg-ember" />
-                <span className="text-xs uppercase tracking-widest text-ink/80">
-                  ICF Certified · ACC
-                </span>
               </div>
             </div>
           </div>
@@ -195,44 +182,32 @@ export default function Home() {
       {/* ============ MEET YOUR COACH ============ */}
       <section className="relative py-20 md:py-32 bg-cream overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 md:px-10">
-          {/* Text intro above the landscape */}
-          <div className="max-w-3xl mb-12 md:mb-16">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="h-px w-10 bg-ember" />
-              <span className="text-xs uppercase tracking-[0.25em] text-ember font-medium">
-                Meet your coach
-              </span>
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+            {/* Square tree image on left */}
+            <div className="lg:col-span-5 order-2 lg:order-1">
+              <div className="relative aspect-square rounded-[2rem] overflow-hidden shadow-lifted">
+                <img
+                  src={encodeURI(images.tree)}
+                  alt="A solitary tree on open ground"
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: 'center 55%' }}
+                />
+              </div>
             </div>
-            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-plum leading-[1.05] tracking-tight">
-              I'm <span className="italic">Katie</span> — and I believe in
-              holding space for who you really are.
-            </h2>
-          </div>
 
-          {/* Wide atmospheric landscape */}
-          <div className="relative rounded-[2rem] overflow-hidden shadow-lifted aspect-[16/10] md:aspect-[21/10]">
-            <img
-              src={encodeURI(images.tree)}
-              alt="A solitary tree on open ground, with a figure walking beneath it"
-              className="w-full h-full object-cover"
-            />
-            {/* Subtle warm wash to help text legibility if we add any */}
-            <div
-              className="absolute inset-0 pointer-events-none"
-              style={{
-                background:
-                  'linear-gradient(to top, rgba(58,37,59,0.15) 0%, rgba(58,37,59,0) 40%)',
-              }}
-            />
-            {/* Script overlay bottom-right */}
-            <p className="absolute bottom-6 right-6 md:bottom-10 md:right-10 font-script text-cream text-2xl md:text-4xl drop-shadow-lg">
-              walking alongside you.
-            </p>
-          </div>
+            {/* Text on right */}
+            <div className="lg:col-span-7 order-1 lg:order-2">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="h-px w-10 bg-ember" />
+                <span className="text-xs uppercase tracking-[0.25em] text-ember font-medium">
+                  Meet your coach
+                </span>
+              </div>
+              <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-plum leading-[1.05] tracking-tight mb-8">
+                I'm <span className="italic">Katie</span> — and I believe in
+                holding space for who you really are.
+              </h2>
 
-          {/* Text below the landscape, two columns */}
-          <div className="grid md:grid-cols-12 gap-10 md:gap-16 mt-12 md:mt-16 items-start">
-            <div className="md:col-span-7">
               <div className="space-y-5 text-base md:text-lg text-ink/80 leading-relaxed font-light">
                 <p>
                   I walk alongside you as you reconnect with your true self. As
@@ -247,13 +222,11 @@ export default function Home() {
                   commitment to discovering what's possible for you.
                 </p>
               </div>
-            </div>
 
-            <div className="md:col-span-5 md:pl-6 md:border-l md:border-plum/15">
-              <div className="flex flex-col gap-5">
+              <div className="mt-10 flex flex-wrap items-center gap-6">
                 <Link
                   href="/about"
-                  className="inline-flex items-center gap-3 rounded-full border border-plum/30 text-plum px-7 py-4 text-base tracking-wide hover:bg-plum hover:text-cream transition-colors w-fit"
+                  className="inline-flex items-center gap-3 rounded-full border border-plum/30 text-plum px-7 py-4 text-base tracking-wide hover:bg-plum hover:text-cream transition-colors"
                 >
                   More about Katie
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -294,11 +267,15 @@ export default function Home() {
         />
 
         <div className="relative max-w-4xl mx-auto px-6 md:px-10 text-center">
-          <p className="font-script text-sunlit text-3xl md:text-4xl mb-5">
-            curious what's possible?
-          </p>
+          <div className="flex items-center justify-center gap-3 mb-8">
+            <span className="h-px w-10 bg-sunlit" />
+            <span className="text-xs uppercase tracking-[0.25em] text-sunlit font-medium">
+              Curious what's possible?
+            </span>
+            <span className="h-px w-10 bg-sunlit" />
+          </div>
           <h2 className="font-display text-3xl md:text-5xl text-cream leading-tight tracking-tight mb-8">
-            Let's start with a free discovery call.
+            Let's start with a <span className="italic text-sunlit">free</span> discovery call.
           </h2>
           <p className="text-base md:text-lg text-cream/75 leading-relaxed max-w-xl mx-auto mb-10 font-light">
             Sixty minutes. No pressure. Just space to talk about what brought

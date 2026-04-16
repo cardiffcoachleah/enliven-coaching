@@ -60,9 +60,12 @@ export default function About() {
             {/* Story */}
             <div className="lg:col-span-7">
               <div className="mb-10">
-                <p className="font-script text-ember text-2xl md:text-3xl mb-2">
-                  a little about me
-                </p>
+                <div className="flex items-center gap-3 mb-5">
+                  <span className="h-px w-10 bg-ember" />
+                  <span className="text-xs uppercase tracking-[0.25em] text-ember font-medium">
+                    A little about me
+                  </span>
+                </div>
                 <h2 className="font-display text-3xl md:text-4xl text-plum tracking-tight leading-[1.1]">
                   What happens when you don't know where to start?
                 </h2>
